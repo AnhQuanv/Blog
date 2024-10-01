@@ -1,0 +1,47 @@
+.main-content {
+    width: 65%;
+    padding-left: 100px;
+    .header-content {
+        display: flex;
+        // justify-content: space-between;
+        align-items: flex-end;
+        .box-search {
+            width: 83%;
+            .icon {
+                padding-right: 20px;
+                font-size: 20px;
+            }
+            .search-bar {
+                width: 93%;
+                border: none;
+                cursor: pointer;
+                // padding-left: 20px;
+            }
+        }
+
+        .right-header {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            position: relative;
+
+            .select-box {
+                span {
+                    font-size: 15px;
+                    color: red;
+                }
+                .select {
+                    border: none;
+                }
+            }
+            .dark-mode {
+                font-size: 20px;
+                position: absolute;
+                top: 67%;
+                left: 123%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+            }
+        }
+    }
+}

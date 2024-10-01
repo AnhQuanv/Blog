@@ -1,0 +1,15 @@
+.app-container {
+    .content {
+        display: flex;
+        .main-container {
+            flex-grow: 1; // Cho phép main-container chiếm phần còn lại
+            padding: 20px; // Thêm padding nếu cần
+        }
+
+        .slidebar-container {
+            width: 30%;
+            height: 100vh;
+            display: flex;
+        }
+    }
+}

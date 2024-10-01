@@ -1,0 +1,81 @@
+.sidebar-container {
+    width: 100%;
+    background: gray;
+    height: 100vh;
+    padding-left: 40%;
+    overflow: auto;
+
+    .title {
+        padding: 50px 0;
+    }
+
+    .sidebar-item {
+        display: block;
+        font-size: 20px;
+        border-bottom: 1px solid #fff;
+        font-weight: 600;
+
+        .toggle-btn {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateX(5px);
+            }
+        }
+
+        .sidebar-content {
+            padding-left: 15px;
+            padding-top: 10px;
+            font-size: 14px;
+            font-weight: 200;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .active {
+            max-height: 200px;
+            transition: max-height 0.3s ease;
+        }
+
+        .sidebar-subitem {
+            padding: 5px 0;
+            position: relative;
+            cursor: pointer;
+            padding-left: 20px;
+            text-decoration: none;
+
+            &:hover {
+                transform: translateX(5px);
+                transition: transform 0.3s ease;
+            }
+
+            a {
+                text-decoration: none; /* Loại bỏ gạch chân khỏi liên kết */
+                color: inherit; /* Giữ màu sắc giống với sidebar-subitem */
+            }
+
+            &.selected a {
+                font-weight: bold; /* Thêm hiệu ứng khi mục được chọn */
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                background-color: transparent;
+                border-radius: 50%;
+                transition: background-color 0.3s ease;
+            }
+
+            &.selected::before {
+                background-color: green;
+            }
+        }
+    }
+}
